@@ -5,6 +5,19 @@
 // Examples:
 // * 'abc' =>  ['ab', 'c_']
 // * 'abcdef' => ['ab', 'cd', 'ef']
+
+// BETTER SHORTER SOLUTION
+function solution(str){
+  const arr = [];
+  for (let i = 0; i < str.length; i += 2){ // increment by two
+    const second = str[i+1] || '_'; // second will be '_' if length odd
+    arr.push(str[i] + second);
+  }
+  return arr;
+}
+
+
+// MY SOLUTION
 function solution(str){
   const arr = str.split('');
   let result = [];
@@ -25,4 +38,3 @@ function solution(str){
 
   return result;
 }
-
